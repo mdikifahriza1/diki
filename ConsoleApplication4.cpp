@@ -3,23 +3,36 @@ using namespace std;
 
 int main()
 {
-    int spasi, baris;
-        cout << "Masukan Jumlah Baris: ";
-        cin >> baris;
+    int baris;
+    cout << "Masukkan Jumlah Baris: ";
+    cin >> baris;
 
-        for (int i = 1, k = 0; i <= baris; i++, k = 0)
+    for (int i = baris; i > 0; i--)
+    {
+
+        for (int k = 0; k < i; k++)
         {
-            for (spasi = 1; spasi <= baris - i; ++spasi)
-            {
-                cout << "  ";
-            }
-
-            while (k != 2 * i - 1)
-            {
-                cout << "* ";
-                ++k;
-            }
-            cout << endl;
+            cout << "*";
         }
+
+        for (int j = 0; j < baris - i; j++)
+        {
+            cout << " ";
+        }
+       
+        for (int j = 0; j < baris - i; j++)
+        {
+            cout << " ";
+        }
+
+        for (int k = 0; k < i; k++)
+        {
+            cout << "*";
+        }
+
+
+        cout << "\n";
+    }
+
     return 0;
 }
